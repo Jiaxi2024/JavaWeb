@@ -46,12 +46,17 @@ Copy code
   * IDEA右侧maven点击reload all maven projects
   * 或者：https://stackoverflow.com/questions/49364261/cannot-resolve-symbol-springapplication/49364667
 
-* 不要忘了指定请求路径
+* 不要忘记添加请求处理方法，并添加注释
   * 比如    @RequestMapping("/hello")    打开http://localhost:8080/hello  这里的http://localhost:8080后的/hello就是指定的请求路径
 
 
 #### HTTP协议
 
+1. 基于TCP协议：面向连接、安全
+2. 一次请求对应一次相应
+3. HTTP协议是无状态协议：对于事务处理没有记忆能力（多次请求中不能共享数据）
+
+*
 #### Web服务器-Tomcat
 
 
