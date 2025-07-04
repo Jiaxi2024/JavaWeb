@@ -1,5 +1,6 @@
 # JavaWeb
 
+(下载的maven和项目所有的资料都是基于jdk11版本）
 缺：day123，day4maven
 
 ## day4  
@@ -17,8 +18,7 @@
 2. 远程仓库（私服）：一般是公司团队搭建的私有仓库
 3. 中央仓库：Maven团队搭建的，全球唯一
 
->PS: 国内按照maven后，
-建议你在美国这样做：
+>PS: 国内按照maven后,建议你在美国这样做：
 还原 settings.xml 中的 mirror 设置：
 
 删除或注释掉 <mirrors> 中的阿里云配置；
@@ -37,8 +37,13 @@ Copy code
 </mirror>
 保持 localRepository 可以不变
 
-### Web 入门，Spring
 
-#### 
+### Web Spring
+
+#### SpringBootWeb入门
+
+#### HTTP协议
+
+#### Web服务器-Tomcat
 
 
