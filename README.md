@@ -41,6 +41,14 @@ Copy code
 ### Web Spring
 
 #### SpringBootWeb入门
+**报错**
+* 运行springboot demo的时候报错：Cannot resolve symbol Springframework
+  * IDEA右侧maven点击reload all maven projects
+  * 或者：https://stackoverflow.com/questions/49364261/cannot-resolve-symbol-springapplication/49364667
+
+* 不要忘了指定请求路径
+  * 比如    @RequestMapping("/hello")    打开http://localhost:8080/hello  这里的http://localhost:8080后的/hello就是指定的请求路径
+
 
 #### HTTP协议
 
