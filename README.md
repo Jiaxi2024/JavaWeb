@@ -80,11 +80,13 @@ Web服务器直接对HTTP协议进行封装，使得开发者不必直接对协�
    
  * 端口
    找到apache-tomcat软件包中的conf/server.xml的以下代码，改port号就可以了（比如浏览器localhost:9000)
+
 ```
     <Connector port="9000" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" />
-   
+```
+
  * 如何部署到tomcat
    将项目放置到webapps目录下，就部署好了
   
