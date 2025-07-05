@@ -3,17 +3,16 @@
 (下载的maven和项目所有的资料都是基于jdk11版本）
 缺：day123，day4maven
 
-## day4  
+day4  
+## Maven  
 
-### Maven  
-
-#### Maven的作用
+### Maven的作用
 
 * 方便快捷的管理项目的依赖jar包，避免版本冲突
 * 提供标准统一的项目结构（无论用哪一款开发工具eclipse/IDEA/...，都可以互相导入了）
 * 标准跨平台（Linux,Windows,MacOS)的自动化项目构建方式
 
-#### 仓库 存储管理各种jar包
+### 仓库 存储管理各种jar包
 1. 本地仓库：自己计算机的一个目录
 2. 远程仓库（私服）：一般是公司团队搭建的私有仓库
 3. 中央仓库：Maven团队搭建的，全球唯一
@@ -38,9 +37,9 @@ Copy code
 保持 localRepository 可以不变
 
 
-### Web Spring
+## Web Spring
 
-#### SpringBootWeb入门
+### SpringBootWeb入门
 **报错**
 * 运行springboot demo的时候报错：Cannot resolve symbol Springframework
   * IDEA右侧maven点击reload all maven projects
@@ -50,7 +49,7 @@ Copy code
   * 比如    @RequestMapping("/hello")    打开http://localhost:8080/hello  这里的http://localhost:8080后的/hello就是指定的请求路径
 
 
-#### HTTP协议
+### HTTP协议
 
 * HTTP概述
 
@@ -71,23 +70,44 @@ Copy code
     * 响应码：1xx 响应中 2xx 成功 3xx 重定向 4xx 客户端错误 5xx 服务器错误
   * 响应头：第二行开始，格式key value
   * 响应体：最后一部分，存放响应数据
-  
-* Web服务器：Tomcat  
+    
+### Web服务器-Tomcat 
+
 Web服务器直接对HTTP协议进行封装，使得开发者不必直接对协议进行操作。主要功能是“提供网上信息的浏览”
 
  * 启动  
    双击/bin/startup.bat
    
  * 端口
-   找到apache-tomcat软件包中的conf/server.xml的以下代码，改port号就可以了（比如浏览器localhost:80)
-    <Connector port="80" protocol="HTTP/1.1"
+   找到apache-tomcat软件包中的conf/server.xml的以下代码，改port号就可以了（比如浏览器localhost:9000)
+    <Connector port="9000" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" />
    
  * 如何部署到tomcat
    将项目放置到webapps目录下，就部署好了
   
-    
-#### Web服务器-Tomcat
+## 请求  
+
+1. Postman    
+一款功能强大的网页调试与发送网页HTTP请求的chrome插件（常用于接口调试）
+
+3. 简单参数
+4. 实体参数
+5. 数组集合参数
+6. 日期参数
+7. Json参数
+8. 路径参数
+ 
+## 响应
+
+## 分层解耦
+
+## MySQL
+
+## MyBatis
+
+## Spring  
+
 
 
