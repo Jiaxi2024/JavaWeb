@@ -52,11 +52,42 @@ Copy code
 
 #### HTTP协议
 
+* HTTP概述
+
+超文本传输协议，规定了浏览器 和服务器直接的数据传输规则  
+
 1. 基于TCP协议：面向连接、安全
 2. 一次请求对应一次相应
 3. HTTP协议是无状态协议：对于事务处理没有记忆能力（多次请求中不能共享数据）
 
-*
+* HTTP请求协议
+  * 请求行（请求数据第一行）：请求方式、资源路径、协议版本
+  * 请求头（第二行开始）：格式key、value
+  * 请求体：POST请求
+    * 备注：请求方式GET（请求参数在请求行，大小有限制）；请求方式POST（请求参数在请求体，POST请求没有大小限制）
+
+* HTTP相应协议
+  * 相应码（响应数据第一行）：协议、状态码、描述
+    * 响应码：1xx 响应中 2xx 成功 3xx 重定向 4xx 客户端错误 5xx 服务器错误
+  * 响应头：第二行开始，格式key value
+  * 响应体：最后一部分，存放响应数据
+  
+* Web服务器：Tomcat  
+Web服务器直接对HTTP协议进行封装，使得开发者不必直接对协议进行操作。主要功能是“提供网上信息的浏览”
+
+ * 启动  
+   双击/bin/startup.bat
+   
+ * 端口
+   找到apache-tomcat软件包中的conf/server.xml的以下代码，改port号就可以了（比如浏览器localhost:80)
+    <Connector port="80" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+   
+ * 如何部署到tomcat
+   将项目放置到webapps目录下，就部署好了
+  
+    
 #### Web服务器-Tomcat
 
 
