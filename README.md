@@ -2,6 +2,7 @@
 
 (下载的maven和项目所有的资料都是基于jdk11版本）
 缺：day123，day4maven，day5-12，13
+day6.6 idea中见不到创建好的已经存在的table，然后跳着学从day8开始了
 
 day4  
 ## Maven  
@@ -244,6 +245,7 @@ Bean对象：IOC容器中创建、管理的对象
 @Component  控制反转
 @Autowired  依赖注入
 
+day06 
 ## MySQL  
 数据库DB：存储和管理数据的仓库  
 SQL:Structured Query Language: 操作关系型数据库的编程语言  
@@ -264,13 +266,38 @@ SQL:Structured Query Language: 操作关系型数据库的编程语言
     3. 创建
     4. 删除
 
-5. DML
-6. DQL
+4. DML
+5. DQL
 
 
 ## MyBatis     
+看懂day09 mapper接口+XML映射写法  
+day10多条件分页查询-菜品管理，列表页逻辑核心    
+
+Mybatis：持久层（dao，就是三层架构访问数据的）开发，用于简化JDBC开发    
+
+### 入门    
+1. 使用mybatis查询用户数据    
+    1. 创建springboot工程、数据库表user、实体类user
+    2. 引入mybatis相关依赖，配置mybatis
+    3. 编写SQL语句（注解/XML）
+>bug:
+>构建项目并运行成功无报错后，并没有如预期一样在控制台输出表
+>原因：没有确保这个实体类的字段是和数据库一一对应的，否则 MyBatis 会映射失败（但不报错，只返回空）。
+>
+2. 
+
+
+
+### 基础增删改查    
+
+### Mybatis动态SQL
+
 
 ## Spring    
+day12 看懂自动注入，业务类注册逻辑
+day13 MVC 看懂rest api如何接受、相应前端数据
 
+day19 redis基础操作（对应苍穹外卖day05）
 
 
