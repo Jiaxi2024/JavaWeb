@@ -276,7 +276,7 @@ day10多条件分页查询-菜品管理，列表页逻辑核心
 
 Mybatis：持久层（dao，就是三层架构访问数据的）开发，用于简化JDBC开发    
 
-### 入门    
+### mybatis入门    
 1. 使用mybatis查询用户数据    
     1. 创建springboot工程、数据库表user、实体类user
     2. 引入mybatis相关依赖，配置mybatis
@@ -285,13 +285,41 @@ Mybatis：持久层（dao，就是三层架构访问数据的）开发，用于�
 >构建项目并运行成功无报错后，并没有如预期一样在控制台输出表
 >原因：没有确保这个实体类的字段是和数据库一一对应的，否则 MyBatis 会映射失败（但不报错，只返回空）。
 >
-2. 
+
+2. JDBC介绍    
+JDBC是使用java语言操作关系型数据库的一套API    
+    1. 注册驱动
+    2. 获取连接对象
+    3. 获取执行SQL的statement对象，执行SQL语句，返回结果
+    4. 封装结果数据
+    5. 释放资源
+缺点：是硬编码、操作繁琐、频繁获取连接释放连接资源浪费    
+
+综上，mybatis完胜JDBC，我们只需要关注application.properties和mapper接口就可以了  （application.properties包括数据库连接四要素：driver,url,username,password）  
+ 
+3. 数据库连接池    
+* 数据库连接池是一个容器，负责分配、管理数据库连接（connection）
+* 允许应用程序重复使用一个现有的数据库连接，而不是重新建立一个
+* 释放空闲时间超过最大空闲时间的连接，避免因为没有即使释放连接而引起的数据库连接遗漏
+
+标准接口：DataSource
+
+5. lombok
+补全java代码
+@Data
+@
+@
 
 
+### mybatis基础增删改查    
+*准备工作*
+* 准备数据库表
+* 创建新springboot工程，选择引入对应的起步依赖（mybatis，mysql）
+* application.properties中引入数据库连接信息
+* 创建对应的实体类
+* 准备Mapper接口
 
-### 基础增删改查    
-
-### Mybatis动态SQL
+### Mybatis动态SQL    
 
 
 ## Spring    
